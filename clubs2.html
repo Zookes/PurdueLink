@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="css/clubs2.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="index.html" class="logo">
+                <img src="images/PurdueLogo.png" alt="logo">
+                <h2>PurdueLink</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="clubs1.html">Clubs</a></li>
+            </ul>
+            <button class="login-btn">LOG IN</button>
+  
+        </nav>
+    </header>
+
+    <div class="blur-bg-overlay"></div>
+    <div class="navbar-bar"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="sides">
+        <div class="left">
+            <h1>Clubs on Campus</h1>
+           <ul class="club-list">
+                <li><h3>3D Printed Prosthetics Club</h3>The 3d Printing Club is an organizaation which strives to improve the lives of amputees and limb different members through the design, manufacturing, and implementation of assistive prosthetic devices.</li>
+                <li><h3>3D Printing Club</h3>3dPC aims to promote and teach Purdue students about the concepts and practices of a new manufacturing process called three-dimensional printing. This club will offer, to all students, education and a hands on experience with this technology.</li>
+                <li><h3>A Cause for Paws</h3>"Helping one paw at a time"</li>
+                <li><h3>Accounting Association</h3>The purpose of the Purdue Accounting Association is to help students develop an understanding of the accounting profession and to prepare them for the job search process. PAA also provides a social setting for Purdue students to expand their network.</li>
+                <li><h3>Act Natural</h3>Purdue's original sketch comedy troupe, producing live performances and digital shorts.</li>
+                <li><h3>Cricket Club</h3>The official club for cricket at Purdue. We welcome all Purdue students, staff, and faculty from all nationalities and walks of life. Whether you are an experienced player, or just want to learn the game, we host events for players of all skill levels. </li>
+                <li><h3>Equestrian Club</h3>The mission of the Equine Science Club of Purdue is to provide an environment for students to learn about the equine community and engage with equine professionals, peers and animals.</li>
+                <li><h3>Airsoft Club</h3>Join our Discord for our upcoming events in 2024-2025. The Purdue Airsoft Club is dedicated to promoting the sport of airsoft within the Purdue community by organizing events and providing equipment and storage.</li>
+                <li><h3>Agronomy Club</h3>What is Agronomy? Agronomy is the study of crop production and soil management. Agronomy Club is designed to create a community of Purdue students with common interests. We accept students in all areas of study and majors.</li>
+           </ul>
+           <div class="buttons">
+            <button class = "last-page" onclick="document.location='clubs1.html'">Last Page</button>
+            <button class = "next-page" onclick="document.location='workinprogress.html'">Next Page</button>
+        </div>
+        </div>
+        <div class="right">
+            
+            <div class="article-stuff">
+                    <div class="sml-art1">
+                        <h3 class="art1-title">Purdue Pete's Homecoming Triumph</h3>
+                        <a href="Article1.html" class = "read-more-link">Read More</a>
+                    </div>
+                    <div class="sml-art2">
+                        <h3 class="art2-title">Purdue's Heartbeat in March Madness</h3>
+                        <a href="Article2.html" class = "read-more-link">Read More</a>
+                    </div>
+                    <div class="sml-art3">
+                        <h3 class="art3-title">The Disappearance of Campus Statue</h3>
+                        <a href="Article3.html" class = "read-more-link">Read More</a>
+                    </div>
+                    <div class="sml-art4">
+                        <h3 class="art4-title">The Corn Sculpture of West Lafayette</h3>
+                        <a href="Article4.html" class = "read-more-link">Read More</a>
+                    </div>
+            </div>
+            
+        
+        
+            <div class="calendar__bigstuff">
+                <h2>18, Sunday</h2>
+                <h3>November</h3>
+              </div>
+            <div class="calendar">
+                <div class="calendar__date">
+                  <div class="calendar__day">M</div>
+                  <div class="calendar__day">T</div>
+                  <div class="calendar__day">W</div>
+                  <div class="calendar__day">T</div>
+                  <div class="calendar__day">F</div>
+                  <div class="calendar__day">S</div>
+                  <div class="calendar__day">S</div>
+                  <div class="calendar__number"></div>
+                  <div class="calendar__number"></div>
+                  <div class="calendar__number"></div>
+                  <div class="calendar__number">1</div>
+                  <div class="calendar__number">2</div>
+                  <div class="calendar__number">3</div>
+                  <div class="calendar__number">4</div>
+                  <div class="calendar__number">5</div>
+                  <div class="calendar__number">6</div>
+                  <div class="calendar__number">7</div>
+                  <div class="calendar__number">8</div>
+                  <div class="calendar__number">9</div>
+                  <div class="calendar__number">10</div>
+                  <div class="calendar__number">11</div>
+                  <div class="calendar__number">12</div>
+                  <div class="calendar__number">13</div>
+                  <div class="calendar__number">14</div>
+                  <div class="calendar__number">15</div>
+                  <div class="calendar__number">16</div>
+                  <div class="calendar__number">17</div>
+                  <div class="calendar__number calendar__number--current">18</div>
+                  <div class="calendar__number">19</div>
+                  <div class="calendar__number">20</div>
+                  <div class="calendar__number">21</div>
+                  <div class="calendar__number">22</div>
+                  <div class="calendar__number">23</div>
+                  <div class="calendar__number">24</div>
+                  <div class="calendar__number">25</div>
+                  <div class="calendar__number">26</div>
+                  <div class="calendar__number">27</div>
+                  <div class="calendar__number">28</div>
+                  <div class="calendar__number">29</div>
+                  <div class="calendar__number">30</div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+</body>

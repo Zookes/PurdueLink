@@ -1,0 +1,515 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #cfb991;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+}
+
+.navbar {
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+
+.navbar-bar{ 
+    width:100%;
+    height: 1%;
+    background-color: #000;
+}
+
+
+.navbar .hamburger-btn {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+}
+
+.navbar .logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.navbar .logo h2 {
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .links .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar .links a {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+    color: white;
+}
+
+.navbar .login-btn {
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #9d9795;
+}
+
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 720px;
+    background: #fff;
+    border: 2px solid #fff;
+    transform: translate(-50%, -70%);
+}
+
+.show-popup .form-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.1s;
+}
+
+.form-popup .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #878484;
+    cursor: pointer;
+}
+
+.blur-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.1s ease;
+}
+
+.show-popup .blur-bg-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-popup .form-box {
+    display: flex;
+}
+
+.form-box .form-details {
+    width: 100%;
+    color: #fff;
+    max-width: 330px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .form-details {
+    padding: 0 40px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    color: black;
+}
+
+.signup .form-details {
+    padding: 0 20px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    color: black;
+
+}
+
+.form-box .form-content {
+    width: 100%;
+    padding: 35px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    font-size: 0.95rem;
+    padding: 0 15px;
+    border: 1px solid #717171;
+    border-radius: 3px;
+}
+
+.input-field input:focus {
+    border: 1px solid #DDb945;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #4a4646;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    padding: 16px 15px 0;
+}
+
+.input-field input:is(:focus, :valid)~label {
+    transform: translateY(-120%);
+    color: #DDb945;
+    font-size: 0.75rem;
+}
+
+.form-box a {
+    color: black;
+    text-decoration: underline;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+form :where(.forgot-pass-link, .policy-text) {
+    display: inline-flex;
+    margin-top: 13px;
+    font-size: 0.95rem;
+}
+
+form button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 25px 0;
+    background: black;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background: #DDb945;
+}
+
+.form-content .bottom-link {
+    text-align: center;
+}
+
+.form-popup .signup,
+.form-popup.show-signup .login {
+    display: none;
+}
+
+.form-popup.show-signup .signup {
+    display: flex;
+}
+
+.signup .policy-text {
+    display: flex;
+    margin-top: 14px;
+    align-items: center;
+}
+
+.signup .policy-text input {
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+}
+
+@media (max-width: 950px) {
+    .navbar :is(.hamburger-btn, .close-btn) {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .logo img {
+        display: none;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .navbar .links {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        left: -100%;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+        background: #fff;
+        transition: 0.2s ease;
+    }
+
+    .navbar .links.show-menu {
+        left: 0;
+    }
+
+    .navbar .links a {
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        color: #000;
+    }
+
+    .navbar .links a:hover {
+        color: #00BCD4;
+    }
+
+    .navbar .login-btn {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .form-popup {
+        width: 95%;
+    }
+
+    .form-box .form-details {
+        display: none;
+    }
+
+    .form-box .form-content {
+        padding: 30px 20px;
+    }
+}
+
+.sides{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.left, .right{
+    flex-direction: column;
+}
+
+.left{ 
+    flex: 69%;
+    height: auto;
+    background-color: #d0b892;
+}
+
+.right{
+    display:flex;
+    flex:30%;
+    float:right;
+    padding: 1px;
+}
+
+
+.calendar {
+position: relative;
+width: 300px;
+background-color: #fff;
+box-sizing: border-box;
+box-shadow: 0 5px 50px rgba(#000, 0.5);
+overflow: hidden;
+margin-right:auto;
+margin-left:auto;
+overflow: hidden;
+}
+
+.calendar__picture {
+text-align: center;
+position: relative;
+height:fit-content;
+width:84%;
+padding: 20px ;
+color: #fff;
+background: #9d9795;
+text-shadow: 0 2px 2px rgba(#000, 0.2);
+box-sizing: border-box;
+margin-right:auto;
+margin-left:auto;
+margin-top: 5%;
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 500;
+}
+}
+
+.calendar__date {
+padding: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+grid-gap: 10px;
+box-sizing: border-box;
+}
+
+.calendar__day {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 25px;
+font-weight: 600;
+color: #262626;
+
+&:nth-child(7) {
+    color: #ff685d;
+}
+}
+
+.calendar__number {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 25px;
+color: #262626;
+
+&:nth-child(7n) {
+    color: #ff685d;
+    font-weight: 700;
+}
+
+&--current,
+&:hover {
+    background-color: #009688;
+    color: #fff !important;
+    font-weight: 700;
+    cursor: pointer;
+}
+}
+
+
+.club-stuff{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    outline: 10px;
+}
+
+.club1, .club2, .club3, .club4{ 
+    padding: 10px 10px;
+    outline-style:solid;
+}
+
+.club1, .club3{
+    background-color: #c4bfc0;
+}
+
+.club2, .club4{
+    background-color:#ebd99f;
+}
+
+
+.article{
+    outline-style: solid;
+}
+
+.article-title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.article-img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+    height: auto;
+}
+
+.article-stuff{
+    padding: 15px 25px;
+    font-size: 1rem;
+
+}
